@@ -1,0 +1,127 @@
+<!-- Sub-page 1 content -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+        <title>About This Website</title>
+       
+        <link rel="stylesheet" type="text/css" href="../css/myStyles.css">
+    </head>
+
+    <body class="pageDesign">
+      
+    <div id="navbar"></div>
+    <div id="parent-background" class="background-home2 container-fluid">   
+    </div>
+    <div class="container-fluid" id="sub1content"></div>
+<div class="container-fluid">
+    <div class="text-center"><button type="button" class="btn btn-info" id="ratingSubmit">Rate This Website!</button>
+    </div>
+    <div class="text-center">
+        <div class="col-3 btn-group gap-2" role="group" aria-label="website-rating">
+            <button type="button" class="btn btn-outline-danger" id="bsminusButton">-</button>      
+            <button type="button" class="btn btn-dark" id="rating"></button>
+            <button type="button" class="btn btn-outline-success" id="bsplusButton">+</button>
+        </div>
+    </div>
+</div>
+   
+    
+    
+    <div id="footer"></div>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+       
+       <script>
+        $('#navbar').load('../common/navbar.html');
+        $('#sub1content').load('content.html');
+        $('#footer').load('../common/footer.html');
+       </script>
+               
+<!--ratings-->    
+<script>
+        let rateDiv = document.getElementById("rating");
+
+let minusButton = document.getElementById("bsminusButton");
+
+let rateValue = document.createElement("span");
+
+rateValue.textContent = "1";
+
+rateDiv.appendChild(rateValue);
+
+let plusButton = document.getElementById("bsplusButton");
+
+
+minusButton.addEventListener("click", function() {
+
+	let currentNumber = parseInt(rateValue.textContent);
+
+	if (currentNumber > 1) {
+
+		rateValue.textContent = (currentNumber - 1).toString();
+
+	}
+
+});
+
+plusButton.addEventListener("click", function() {
+
+	let currentNumber = parseInt(rateValue.textContent);
+
+	if (currentNumber < 5) {
+	
+		rateValue.textContent = (currentNumber + 1).toString();
+
+	}
+
+});
+
+
+let submitButton = document.getElementById("ratingSubmit");
+
+submitButton.addEventListener("click", function() {
+
+	let currentNumber = parseInt(rateValue.textContent);
+
+	let message;
+
+	if (currentNumber === 1) {
+		
+		message = "Thank you for your rating! You have rated our website as very poor design";
+
+	} else if (currentNumber === 2) {
+
+		message = "Thank you for your rating! You have rated our website as poor design";
+
+	} else if (currentNumber === 3) {
+
+		message = "Thank you for your rating! You have rated our website as average design";
+
+	} else if (currentNumber === 4) {
+
+		message = "Thank you for your rating! You have rated our website as good design";
+
+	} else if (currentNumber === 5) {
+	
+		message = "Thank you for your rating! You have rated our website as awesome design";
+
+	}
+
+	alert(message);
+
+});
+    </script>
+  
+  
+      
+  
+  
+    <script src="../js/myScript.js"></script>
+      
+      
+</body>
+</html>

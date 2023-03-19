@@ -1,0 +1,257 @@
+  /* Body styles */
+ 
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #e3f2fd;;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  @media (max-width: 767px) {
+    body {  
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #e3f2fd;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #e3f2fd;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+  /* Headings styles */
+  h1, h2, h3, h4, h5, h6 {
+    
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  /* Adjust font size for small screens */
+  @media only screen and (max-width: 360px) {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph styles */
+  p {
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  
+ /* Navbar hovereffect */
+ .navbar-nav a.anim-highlight {
+    position: relative;
+    transition: all 0.3s ease-out;
+  }
+  
+  .navbar-nav a.anim-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgb(241, 230, 230);
+    transform: scaleX(0);
+    transition: all 0.3s ease-out;
+  }
+  
+  .navbar-nav a.anim-highlight:hover:after,
+  .navbar-nav a.anim-highlight:hover::after {
+    transform: scaleX(1);
+    background-color: rgb(14, 66, 139);
+  }
+
+
+
+
+ /* Emphasised text */
+  #special-emphasis, #special-emphasis2 {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 700px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+/* border sizes */
+
+.about-header {
+  padding: 50px;
+  margin-top: 35px;
+  margin-bottom: 0px;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/* modals */
+.modal {
+  display: block;
+}
+
+/* form styles */
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+
+
+/* homepage display heading */
+
+.display-1 {
+  
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+body.pageHome #parent-background {
+  background-image: url(../images/Canvatravelpicture.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  }
+body.pageDesign #parent-background {
+  background-image: url(../images/Canvatravelpicture.png);
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+}
+body.pageForm #parent-background {
+  background-image: url(../images/Canvatravelpicture.png);
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to top, transparent 5%, black 100%);
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+}
+
+
+/* homepage cards */
+
+#homepage-headers {
+  padding-top: 5rem;
+}
+
+#homepage-maintitle {
+  font-style: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(4, 40, 54);
+  padding-top: 5rem;
+}
+/* Media page carousel image sizing */
+#carouselJapan .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  overflow: hidden;
+}
+#carouselKorea .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  overflow: hidden;
+}
+#carouselTaiwan .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* navbar transparent on page 3 */
+.page-specific .transparent-navbar {
+  background-color: transparent !important;
+  border-color: transparent;
+  transition: background-color 0.5s ease-in-out; 
+}
+
+.page-specific .navbar.transparent-navbar:hover {
+  background-color: #333333 !important;
+}
+
+/* carousel hover font visibility */
+.carousel-caption {
+  border-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+.carousel-caption:hover {
+  background-color: #333333;
+  color: whitesmoke;
+}
+/* rating buttons styles */
+
+#rating, #ratingSubmit {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#ratingSubmit {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* remove padding for carousels */
+
+#Japan, #Korea, #Taiwan {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* padding for travel concierge text */
+
+.concierge-box {
+  padding-top: 2rem;
+}
