@@ -255,3 +255,11 @@ body.pageForm #parent-background {
 .concierge-box {
   padding-top: 2rem;
 }
+
+/* black text over white carousel*/
+.black-font {
+  color: black;
+}
+.carousel-caption .black-text, .black-font:hover {
+  color: whitesmoke;
+}
