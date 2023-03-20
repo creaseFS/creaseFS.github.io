@@ -231,6 +231,18 @@ body.pageForm #parent-background {
   background-color: #333333;
   color: whitesmoke;
 }
+/* black text over white carousel*/
+.black-font {
+  color: black;
+}
+#black-text {
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+#black-text:hover {
+  background-color: #fdcece;
+}
+}
 /* rating buttons styles */
 
 #rating, #ratingSubmit {
@@ -256,10 +268,9 @@ body.pageForm #parent-background {
   padding-top: 2rem;
 }
 
-/* black text over white carousel*/
-.black-font {
-  color: black;
+/* social media icon styles */
+.socialmedia-icons {
+  margin-right: 2rem;
+  align-items: center;
 }
-.carousel-caption .black-text, .black-font:hover {
-  color: whitesmoke;
-}
+
